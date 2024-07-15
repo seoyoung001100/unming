@@ -2,53 +2,53 @@
     <body>
         <div id="container">
             <!-- 제일 상단의 구름 아이콘 -->
-             <div class="pt-14 w-100% h-40">
+             <div class="pt-8 w-100% h-40">
                 <img id="cloud-icon" src="./assets/icons/cloud.png"/>
-                <h1 id="center" class="text-white text-4xl">Considerando</h1>  <!-- Considerando -->
+                <h1 id="center" class="text-white text-2xl">Considerando</h1>  <!-- Considerando -->
              </div>
             
 
             <!-- 메인 카드? 들 -->
-             <div id="c-center-sb" class="w-[1500px] h-[750px] mx-auto mt-20">
+             <div id="c-center-sb" class="w-[1000px] h-[500px] mx-auto mt-0.4">
                  <span id="r-center-sb" class=" w-[100%] h-[90%]">
                     <!-- 왼쪽의 이미지 구상 (세로로 길게 2개) -->
                     <div id="r-center-se" class=" w-[22%] h-[100%]">
-                        <div id="center" class="bg-slate-100 w-[35%] h-[90%] -translate-y-6 translate-x-3 rounded-full "></div>
-                        <div id="center" class="bg-slate-100 w-[35%] h-[90%] translate-y-6 -translate-x-3 rounded-full "></div>
+                        <div id="center" class="bg-slate-100 w-[35%] h-[90%] -translate-y-6 translate-x-2 rounded-full "></div>
+                        <div id="center" class="bg-slate-100 w-[35%] h-[90%] translate-y-6 -translate-x-2 rounded-full "></div>
                     </div>
                     <!-- 중앙의 메인 카드 (가로로 2개가 들어 갈 예정)-->
                     <div id="c-center-sb" class=" w-[56%] h-[100%]">
                         <!-- main 이미지 -->
                         <div id="center" class=" w-[100%] h-[80%]">
-                            <div class="bg-slate-100 w-[95%] h-[85%] rounded-2xl"></div>
+                            <div class="bg-slate-100 w-[95%] h-[85%] rounded-[10px]"></div>
                         </div>
                         <!-- 헤더 이미지 느낌 -->
                         <div id="c-center-sb" class=" w-[100%] h-[20%]">
-                            <div class="bg-slate-100 w-[95%] h-[75%] rounded-2xl"></div>
+                            <div class="bg-slate-100 w-[95%] h-[75%] rounded-[10px]"></div>
                         </div>
                     </div>
                     <!-- 오른쪽의 목록 구상 (뭘 넣을지는 딱히 못 정했음...)-->
                     <div id="c-center-sb" class=" w-[22%] h-[100%]">
                         <div class=" w-[100%] h-[70%]">
                             <!-- 오늘 날짜 -->
-                            <div class="w-[100%] h-[15%]">
-                                <h1 id="center" class="text-white text-3xl mb-3">{{ currentTime }}</h1>
-                                <hr class="mx-auto w-[80%] h-4">
+                            <div class="w-[100%] h-[15.3%]">
+                                <h1 id="center" class="text-white text-[20px] mb-0.5 -translate-y-1">{{ currentTime }}</h1>
+                                <hr class="mx-auto w-[85%] border-[0.5px]">
                             </div>
                             <!-- 기념일? 정보 -->
                             <div id="r-end-sb" class="w-[100%] h-[85%]">
                                 <div class="w-[90%] h-[100%]">
                                     <div id="c-end-sb" class="text-white w-[100%] h-1/3" v-for="initdete in date" :key="initdete.value">
                                         <span id="c-center" class="h-[100%]">
-                                            <h2 class="text-2xl">{{ initdete.name }}</h2>
-                                            <p>{{ initdete.value }}</p> 
+                                            <h2 class="text-[16.7px]">{{ initdete.name }}</h2>
+                                            <p class="text-[11px]">{{ initdete.value }}</p> 
                                         </span>
                                         
                                     </div>
                                 </div>
                                 <div class="w-[10%] h-[100%]">
                                     <div id="c-end-sb" class="w-[100%] h-1/3" v-for="index in 3" :key="index">
-                                        <span id="center" class="text-3xl h-[100%] text-white">⟢</span>
+                                        <span id="center" class="text-xl h-[100%] text-white">⟢</span>
                                     </div>
                                 </div>
                                 
@@ -61,18 +61,9 @@
                  </span>
 
                  <!-- 제일 하단의 카테고리 -->
-                 <span id="r-center-se" class="w-[50%] h-[10%]">
-                    <div id="center" class="bg-slate-50 w-36 h-11 rounded-full">
-                        <p>카테고리1</p>
-                    </div>
-                    <div id="center" class="bg-slate-50 w-36 h-11 rounded-full">
-                        <p>카테고리1</p>
-                    </div>
-                    <div id="center" class="bg-slate-50 w-36 h-11 rounded-full">
-                        <p>카테고리1</p>
-                    </div>
-                    <div id="center" class="bg-slate-50 w-36 h-11 rounded-full">
-                        <p>카테고리1</p>
+                 <span id="r-center-se" class="w-[50%] h-[10%]" >
+                    <div v-for="categorys in category" :key="categorys.title" id="center" class="bg-slate-50 w-[95px] h-[29px] rounded-full">
+                        <p class="text-[11px]">{{ categorys.title }}</p>
                     </div>
                  </span>
                 
@@ -87,7 +78,7 @@ import axios from 'axios';
 import dayjs from 'dayjs';
 import "dayjs/locale/ko";
 dayjs.locale("ko") //글로벌로 한국어를 사용한다
-import { onMounted} from 'vue'; 
+import { onMounted } from 'vue'; 
 
 // const cityName = ref('');
 // const mainTemp = ref('');
@@ -110,7 +101,22 @@ const date = [
     },
     {
         name: 'SHIN JUNGHWAN',
-        value: '2000. 02. 05',
+        value: '2003. 11. 07',
+    },
+]
+
+const category = [
+    {
+        title: '카테고리 1',
+    },
+    {
+        title: '카테고리 2',
+    },
+    {
+        title: '카테고리 3',
+    },
+    {
+        title: '카테고리 4',
     },
 ]
 
@@ -168,7 +174,7 @@ onMounted(() => {
         background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
     }
     #cloud-icon{
-        width: 70px;
+        width: 50px;
         margin: auto;
         display: block; 
     }
