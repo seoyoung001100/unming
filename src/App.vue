@@ -3,12 +3,16 @@
         <div id="container">
             <!-- 제일 상단의 구름 아이콘 -->
              <div class="pt-8 w-100% h-40">
-                <img id="cloud-icon" src="./assets/icons/cloud.png"/>
+                <router-link to="/">
+                   <img id="cloud-icon" src="./assets/icons/cloud.png"/> 
+                </router-link>
                 <h1 class="center text-white text-2xl">Considerando</h1>  <!-- Considerando -->
              </div>
             
-             <RouterView></RouterView>
-            
+             <!-- 라우터 별로 나오는 컴포넌트 -->
+             <div class="c-center-sb w-[1000px] h-[500px] mx-auto mt-0.4">
+                <RouterView></RouterView>
+             </div>
         </div>
     </body>
     
@@ -16,8 +20,6 @@
 
 <script setup>
 import { RouterView } from 'vue-router';
-
-
 </script>
 
 <style>
