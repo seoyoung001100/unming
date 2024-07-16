@@ -160,7 +160,7 @@ onMounted(() => {
         margin: 0; /* 기본 여백 제거 */
         overflow: hidden;
         width: 100%;
-        position: fixed; 
+        position: fixed; /* 화면 고정 */
     }
     h1{
         font-family: "Playwrite CU", cursive;
