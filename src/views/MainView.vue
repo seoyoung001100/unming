@@ -58,7 +58,7 @@
                 </div>
                 <!-- 날씨 정보 -->
                 <div class="c-center w-[60%] h-[70%]">
-                    <h2 class="center text-white text-2xl">{{ weatherMain }}</h2>
+                    <h2 class="center text-white text-2xl whitespace-pre-wrap text-center">{{ weatherMain }}</h2>
                     <p class="center text-white whitespace-pre-wrap text-center">{{ weatherDescription }}</p>
                 </div>
             </div>
