@@ -1,7 +1,7 @@
 <template lang="">
     <div class="r-center-sb w-[100%] h-[100%]">
         <!-- 타임라인 -->
-        <div class="w-[20%] h-[100%]">
+        <div class="w-[20%] h-[100%] text-white">
             <div class="w-[100%] h-[10%]">
                 <p class="text-[28px]">TIME LINE</p>
             </div>
@@ -15,7 +15,7 @@
                             class="hidden peer" 
                             @change="() => handleSelection(index)"
                         />
-                        <label class="w-[100%] h-[100%] r-start-sb duration-500 peer-checked:translate-x-5" :for="'radio-' + index" >
+                        <label class="w-[100%] h-[100%] r-start-sb duration-500 peer-checked:translate-x-5 peer-checked:text-[#233964]" :for="'radio-' + index" >
                             <div class="center w-[10%] h-[100%]">
                                 <div class="w-[100%]">
                                     <span class="text-xl h-[100%]">⟣</span>
