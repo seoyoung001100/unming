@@ -65,7 +65,7 @@
         </div>
     </span>
 
-    <!-- 제일 하단의 카테고리 -->
+    <!-- 제일 하단의 카테고리  -->
     <span class="r-center-se w-[50%] h-[10%]" >
         <router-link  :to='categorys.value' v-for="categorys in category" :key="categorys.title" class="center bg-slate-50 w-[95px] h-[29px] rounded-full">
             <p class="text-[11px]">{{ categorys.title }}</p> 
