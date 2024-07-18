@@ -28,7 +28,6 @@
                 <div class="w-[100%] h-auto" v-for="textinfo in info" :key="textinfo.id">
                     <h3>{{ textinfo.text }}</h3>
                 </div>
-                
             </div>
 
             <!-- info 3 수정 완 -->
