@@ -43,7 +43,7 @@ import { RouterView } from 'vue-router';
     }
     h4{
         font-family: "IBM Plex Sans KR", sans-serif;
-        font-weight: 600 !important;
+        font-weight: 300 !important;
         font-style: normal;
     }
     h3{
@@ -97,6 +97,12 @@ import { RouterView } from 'vue-router';
         justify-content: center;
         flex-direction: column;
     }
+    .c-start{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
     .c-center{
         display: flex;
         align-items: center;
@@ -143,6 +149,13 @@ import { RouterView } from 'vue-router';
     .r-end-sb{
         display: flex;
         align-items: end;
+        justify-content: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .r-start-sb{
+        display: flex;
+        align-items: start;
         justify-content: center;
         justify-content: space-between;
         flex-direction: row;

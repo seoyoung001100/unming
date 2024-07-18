@@ -67,7 +67,7 @@
 
     <!-- 제일 하단의 카테고리  -->
     <span class="r-center-se w-[50%] h-[10%]" >
-        <router-link  :to='categorys.value' v-for="categorys in category" :key="categorys.title" class="center bg-slate-50 w-[95px] h-[29px] rounded-full">
+        <router-link  :to='categorys.value' v-for="categorys in category" :key="categorys.title" class="center bg-slate-50 w-[95px] h-[29px] rounded-full duration-500 hover:scale-105">
             <p class="text-[11px]">{{ categorys.title }}</p> 
         </router-link>
     </span>
@@ -109,8 +109,8 @@ const category = [
         value: '/profile',
     },
     {
-        title: '카테고리 2',
-        value: '/',
+        title: 'TIME LINE',
+        value: '/TimeLine',
     },
     {
         title: '카테고리 3',

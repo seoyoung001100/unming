@@ -33,7 +33,7 @@
             <!-- info 3 수정 완 -->
             <div class="r-center-se w-[100%] h-[40%]">
                 <div class="c-center-se w-[100%] h-[100%]" v-for="rowIndex in Math.ceil(table.length / 3)" :key="rowIndex">
-                    <div class="r-center-se ltr w-[90%] h-[30%] rounded-3xl shadow-xl mx-auto my-[5px]" 
+                    <div class="r-center-se ltr w-[90%] h-[28%] rounded-3xl shadow-xl mx-auto my-[5px]" 
                         v-for="(item, colIndex) in table.slice((rowIndex - 1) * 3, rowIndex * 3)" 
                         :key="colIndex">
                         <div class="center bg-[#50ADD8] w-[30%] h-[100%] rounded-l-3xl vertical-lr text-white">
