@@ -31,7 +31,7 @@
                 
             </div>
 
-            <!-- info 3 -->
+            <!-- info 3 수정 완 -->
             <div class="r-center-se w-[100%] h-[40%]">
                 <div class="c-center-se w-[100%] h-[100%]" v-for="rowIndex in Math.ceil(table.length / 3)" :key="rowIndex">
                     <div class="r-center-se ltr w-[90%] h-[30%] rounded-3xl shadow-xl mx-auto my-[5px]" 
