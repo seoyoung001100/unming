@@ -41,9 +41,14 @@ import { RouterView } from 'vue-router';
         font-weight: 300;
         font-style: normal;
     }
+    h4{
+        font-family: "IBM Plex Sans KR", sans-serif;
+        font-weight: 600 !important;
+        font-style: normal;
+    }
     h3{
         font-family: "IBM Plex Sans KR", sans-serif;
-        font-weight: 400;
+        font-weight: 400 !important;;
         font-style: normal;
     }
     p{

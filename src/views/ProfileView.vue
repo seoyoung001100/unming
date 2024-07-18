@@ -33,17 +33,18 @@
 
             <!-- info 3 -->
             <div class="r-center-se w-[100%] h-[40%]">
-                <div class="c-center-se w-[100%] h-[100%]" v-for="index in 3" :key="index">
-                    <div class="r-center-se ltr w-[90%] h-[30%] rounded-3xl shadow-xl mx-auto my-[5px]" v-for="index in 3" :key="index">
+                <div class="c-center-se w-[100%] h-[100%]" v-for="rowIndex in Math.ceil(table.length / 3)" :key="rowIndex">
+                    <div class="r-center-se ltr w-[90%] h-[30%] rounded-3xl shadow-xl mx-auto my-[5px]" 
+                        v-for="(item, colIndex) in table.slice((rowIndex - 1) * 3, rowIndex * 3)" 
+                        :key="colIndex">
                         <div class="center bg-[#50ADD8] w-[30%] h-[100%] rounded-l-3xl vertical-lr text-white">
-                            <h3>기타</h3>
+                            <h4>{{ item.text }}</h4>
                         </div>
                         <div class="center bg-white w-[70%] h-[100%] rounded-r-3xl text-[#50ADD8]">
-                            <p class="text-[28px]">70</p>
+                            <p class="text-[28px]">{{ item.value }}</p>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
         
@@ -74,44 +75,44 @@ const info = [
         text: '지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.',
     },
 ]
-// const table =[
-//     {
-//         text: '기타',
-//         value: '10'
-//     },
-//     {
-//         text: '안녕',
-//         value: '70'
-//     },
-//     {
-//         text: '하세',
-//         value: '80'
-//     },
-//     {
-//         text: '요우',
-//         value: '100'
-//     },
-//     {
-//         text: '기타',
-//         value: '100'
-//     },
-//     {
-//         text: '기타',
-//         value: '100'
-//     },
-//     {
-//         text: '기타',
-//         value: '100'
-//     },
-//     {
-//         text: '기타',
-//         value: '100'
-//     },
-//     {
-//         text: '기타',
-//         value: '100'
-//     },
-// ]
+const table =[
+    {
+        text: '기타',
+        value: '10'
+    },
+    {
+        text: '안녕',
+        value: '70'
+    },
+    {
+        text: '하세',
+        value: '80'
+    },
+    {
+        text: '요우',
+        value: '100'
+    },
+    {
+        text: '기타',
+        value: '100'
+    },
+    {
+        text: '기타',
+        value: '100'
+    },
+    {
+        text: '기타',
+        value: '100'
+    },
+    {
+        text: '기타',
+        value: '100'
+    },
+    {
+        text: '기타',
+        value: '100'
+    },
+]
 
 </script>
 
