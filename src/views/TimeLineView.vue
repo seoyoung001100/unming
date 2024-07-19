@@ -49,7 +49,7 @@ const handleSelection = (index) => {
 const date = [
     {
         name: 'TITLE01',
-        value: '2014. 08. 01',
+        value: '2000. 01. 01',
     },
     {
         name: 'TITLE02',
@@ -57,15 +57,15 @@ const date = [
     },
     {
         name: 'TITLE03',
-        value: '2003. 11. 07',
+        value: '2003. 11. 08',
     },
     {
         name: 'TITLE04',
-        value: '2003. 11. 07',
+        value: '2003. 11. 20',
     },
     {
         name: 'TITLE05',
-        value: '2003. 11. 07',
+        value: '2003. 11. 01',
     },
 ]
 </script>

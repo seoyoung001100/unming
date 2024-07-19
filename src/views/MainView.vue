@@ -28,21 +28,7 @@
                 </div>
                 <!-- 기념일? 정보 -->
                 <div class="r-end-sb w-[100%] h-[85%]">
-                    <div class="w-[90%] h-[100%]">
-                        <div class="text-white w-[100%] h-1/3" v-for="initdete in date" :key="initdete.value">
-                            <span class="c-end h-[100%]">
-                                <p class="text-[16.7px]">{{ initdete.name }}</p>
-                                <p class="text-[11px]">{{ initdete.value }}</p> 
-                            </span>
-                            
-                        </div>
-                    </div>
-                    <div class="w-[10%] h-[100%]">
-                        <div class="c-end-sb w-[100%] h-1/3" v-for="index in 3" :key="index">
-                            <span class="center text-xl h-[100%] text-white">⟢</span>
-                        </div>
-                    </div>
-                    
+                    <ItemList :date="date" />
                 </div>
             </div>
 
@@ -66,7 +52,7 @@
     </span>
 
     <!-- 제일 하단의 카테고리  -->
-    <span class="r-center-se w-[50%] h-[10%]" >
+    <span class="r-center-se w-[50%] h-[10%] text-[#233964]" >
         <router-link  :to='categorys.value' v-for="categorys in category" :key="categorys.title" class="center bg-slate-50 w-[95px] h-[29px] rounded-full duration-500 hover:scale-105">
             <p class="text-[11px]">{{ categorys.title }}</p> 
         </router-link>
@@ -74,6 +60,7 @@
 </template>
 
 <script setup>
+import ItemList from '../components/ItemList.vue';
 import axios from 'axios';
 import dayjs from 'dayjs';
 import "dayjs/locale/ko";

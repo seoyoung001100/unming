@@ -2,8 +2,8 @@
     <body>
         <div id="container">
             <!-- 제일 상단의 구름 아이콘 -->
-             <div class="pt-8 w-100% h-40">
-                <router-link to="/">
+             <div class="c-center -translate-y-2 w-[100%] h-40">
+                <router-link to="/" class="w-[50px] h-[50px]">
                    <img id="cloud-icon" src="./assets/icons/cloud.png"/> 
                 </router-link>
                 <h1 class="center text-white text-2xl">Considerando</h1>  <!-- Considerando -->
@@ -20,6 +20,7 @@
 
 <script setup>
 import { RouterView } from 'vue-router';
+
 </script>
 
 <style>
@@ -70,7 +71,6 @@ import { RouterView } from 'vue-router';
     }
     #cloud-icon{
         width: 50px;
-        margin: auto;
         display: block; 
     }
 
