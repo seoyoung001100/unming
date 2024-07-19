@@ -10,9 +10,12 @@
              </div>
             
              <!-- 라우터 별로 나오는 컴포넌트 -->
-             <div class="c-center-sb w-[1000px] h-[500px] mx-auto mt-0.4">
-                <RouterView></RouterView>
-             </div>
+              
+             <div class="content-wrapper c-center-sb w-[1000px] h-[500px] mx-auto mt-0.4">
+                <transition mode="out-in">
+                    <RouterView class="router-view"></RouterView>
+                </transition>
+            </div>
         </div>
     </body>
     
@@ -59,6 +62,15 @@ import { RouterView } from 'vue-router';
         font-style: normal;
     }
 
+    .v-enter-active, .v-leave-active {
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .v-enter-from, .v-leave-to {
+        opacity: 0;
+        transition: opacity 0s ease-in-out;
+    }
+
     #container {
         background-image:
          linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.814)),
@@ -74,6 +86,19 @@ import { RouterView } from 'vue-router';
         display: block; 
     }
 
+    .content-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .router-view {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
 
     /* ---------- 기본적인 큰 스타일 지정 세부적인 조절은 테일윈드를 사용한다. ---------- */
     .center{
