@@ -20,7 +20,7 @@ const props = defineProps({
     date : Array,
 });
 
-console.log('데이터 보여줘라~',props);
+// console.log('데이터 보여줘라~',props);
 </script>
 <style>
     

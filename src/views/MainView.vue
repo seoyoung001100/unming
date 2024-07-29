@@ -101,7 +101,7 @@ const category = [
     },
     {
         title: '카테고리 3',
-        value: '/ProfileView',
+        value: '/',
     },
     {
         title: '카테고리 4',
