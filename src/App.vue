@@ -10,7 +10,6 @@
              </div>
             
              <!-- 라우터 별로 나오는 컴포넌트 -->
-              
              <div class="content-wrapper c-center-sb w-[1000px] h-[500px] mx-auto mt-0.4">
                 <transition mode="out-in">
                     <RouterView class="router-view"></RouterView>
@@ -83,6 +82,11 @@ import { RouterView } from 'vue-router';
     #cloud-icon{
         width: 50px;
         display: block; 
+    }
+
+    /* 배경이미지 넣고 사이즈 조절 */
+    .bg-imges-size{
+        background-size: cover;
     }
 
     .content-wrapper {

@@ -3,18 +3,22 @@
     <span class="r-center-sb w-[100%] h-[90%]">
     <!-- 왼쪽의 이미지 구상 (세로로 길게 2개) -->
         <div class="r-center-se w-[22%] h-[100%]">
-            <div class="center bg-slate-100 w-[35%] h-[90%] -translate-y-6 translate-x-2 rounded-full "></div>
-            <div class="center bg-slate-100 w-[35%] h-[90%] translate-y-6 -translate-x-2 rounded-full "></div>
+            <div class="center bg-imges-size bg-slate-100 w-[35%] h-[90%] -translate-y-6 translate-x-2 rounded-full "
+            :style="{'background-image': `url(${imges[2].img || ''})`}"></div>
+            <div class="center bg-imges-size bg-slate-100 w-[35%] h-[90%] translate-y-6 -translate-x-2 rounded-full "
+            :style="{'background-image': `url(${imges[3].img || ''})`}"></div>
         </div>
         <!-- 중앙의 메인 카드 (가로로 2개가 들어 갈 예정)-->
         <div class="c-center-sb w-[56%] h-[100%]">
             <!-- main 이미지 -->
             <div class="center w-[100%] h-[80%]">
-                <div class="bg-slate-100 w-[95%] h-[85%] rounded-[10px]"></div>
+                <div class="bg-imges-size bg-slate-100 w-[95%] h-[85%] rounded-[10px]" 
+                :style="{'background-image': `url(${imges[0].img || ''})`}"></div>
             </div>
             <!-- 헤더 이미지 느낌 -->
             <div class="c-center-sb w-[100%] h-[20%]">
-                <div class="bg-slate-100 w-[95%] h-[75%] rounded-[10px]"></div>
+                <div class="bg-imges-size bg-slate-100 w-[95%] h-[75%] rounded-[10px]"
+                :style="{'background-image': `url(${imges[1].img || ''})`}"></div>
             </div>
         </div>
 
@@ -107,7 +111,21 @@ const category = [
         title: '카테고리 4',
         value: '/',
     },
-]
+];
+const imges = [
+    {
+        img: require('../assets/imges/main1.jpg'),
+    },
+    {
+        img: require('../assets/imges/main2.jpg'),
+    },
+    {
+        img: require('../assets/imges/sub1.jpg'),
+    },
+    {
+        img: require('../assets/imges/sub2.jpg'),
+    },
+];
 
 onMounted(() => {
     const API_KEY = "4f4fb916c1095a491beb67e9994ee715";

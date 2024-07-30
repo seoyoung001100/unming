@@ -31,16 +31,21 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <div class="bg-slate-200 w-[80%] h-[100%]"></div>
+        <!-- 선택한 타임라인의 내용이 나오는 부분 -->
+        <div class="center w-[80%] h-[100%]">
+            <transition name="fade" mode="out-in">
+                <p v-if="selectedText" :key="selectedTextKey" class="text-[#233964]">{{ selectedText }}</p>
+                <p v-else class="text-[#233964]">텍스트가 없습니다.</p>
+            </transition>
+        </div>
     </div>
     
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 const selected = ref(null);
 
 const handleSelection = (index) => {
@@ -50,26 +55,49 @@ const date = [
     {
         name: 'TITLE01',
         value: '2000. 01. 01',
+        text: '첫번째 타임라인이 들어갑니다.'
     },
     {
         name: 'TITLE02',
         value: '2000. 02. 05',
+        text: '두번째 타임라인이 들어갑니다.'
     },
     {
         name: 'TITLE03',
         value: '2003. 11. 08',
+        text: '세번째 타임라인이 들어갑니다.'
     },
     {
         name: 'TITLE04',
         value: '2003. 11. 20',
+        text: '네번째 타임라인이 들어갑니다.'
     },
     {
         name: 'TITLE05',
         value: '2003. 11. 01',
+        text: '다섯번째 타임라인이 들어갑니다.'
     },
 ]
+
+const selectedText = computed(() => {
+    if (selected.value !== null && date[selected.value].text) {
+        return date[selected.value].text;
+    }
+    return null;
+});
+const selectedTextKey = computed(() => {
+    return selected.value !== null ? date[selected.value].text : null;
+});
 </script>
 
 <style scoped>
     
+.fade-enter-active, .fade-leave-active {
+  /* transition: opacity 0.5s ease-in-out; */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+  transform: translateY(-10px);
+}
 </style>
