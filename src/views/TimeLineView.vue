@@ -37,7 +37,7 @@
         <div class="center w-[80%] h-[100%]">
             <transition name="fade" mode="out-in">
                 <p v-if="selectedText" :key="selectedTextKey" class="text-[#233964]">{{ selectedText }}</p>
-                <p v-else class="text-[#233964]">텍스트가 없습니다.</p>
+                <p v-else class="text-white">텍스트가 없습니다.</p>
             </transition>
         </div>
     </div>

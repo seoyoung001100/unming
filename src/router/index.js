@@ -4,6 +4,8 @@ import ProfileCardView from "@/views/ProfileCardView.vue";
 import ProfileView from "@/views/ProfileView.vue";
 import MainView from "@/views/MainView.vue"
 import TimeLineView from "@/views/TimeLineView.vue"
+import GalleryView from "@/views/GalleryView.vue"
+import GalleryCardView from "@/views/GalleryCardView.vue"
 
 const routes = [
     {
@@ -24,10 +26,20 @@ const routes = [
             },
         ],
     },
-    // {
-    //     path: '/ProfileView',
-    //     component: ProfileView,
-    // },
+    {
+        path: '/Gallery',
+        component: GalleryView,
+        children:[
+            {
+                path: '', //기본으로 설정할 이미지를 말한다
+                component: GalleryCardView, //프로필 카드
+            },
+            {
+                path: 'ProfileView',
+                component: DetailedProfileView, //프로필 세부 내용
+            },
+        ],
+    },
     {
         path: '/TimeLine',
         component: TimeLineView,

@@ -104,8 +104,8 @@ const category = [
         value: '/TimeLine',
     },
     {
-        title: '카테고리 3',
-        value: '/',
+        title: 'GALLERY',
+        value: '/Gallery',
     },
     {
         title: '카테고리 4',
