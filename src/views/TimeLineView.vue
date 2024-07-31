@@ -4,6 +4,7 @@
         <div class="w-[20%] h-[100%] text-white">
             <div class="w-[100%] h-[10%]">
                 <p class="text-[28px]">TIME LINE</p>
+                <hr class=" w-[71.5%] border-[0.5px]">
             </div>
             <div class="r-start-sb w-[100%] h-[90%]">
                 <div class="h-[100%]">
@@ -37,7 +38,8 @@
         <div class="center w-[80%] h-[100%]">
             <transition name="fade" mode="out-in">
                 <p v-if="selectedText" :key="selectedTextKey" class="text-[#233964]">{{ selectedText }}</p>
-                <p v-else class="text-white">텍스트가 없습니다.</p>
+                <!-- <p v-else class="text-white">텍스트가 없습니다.</p> -->
+                <img v-else class="m-auto w-[30%]" src="../assets/imges/nongdamgom.png" alt="nongdamgom">
             </transition>
         </div>
     </div>

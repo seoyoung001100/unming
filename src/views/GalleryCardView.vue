@@ -10,26 +10,23 @@ import GalleryCard from '../components/GalleryCard.vue';
 const date = 
 [
     {
-        name: 'KOO JUNGMO',
-        text: '크래비티 | 구정모',
-        position: '리드보컬',
+        name: 'TITLE01',
+        text: 'text1 | text2',
         value: '/링크1',
-        // img: require('../assets/imges/koojungmo1.png'),
+        img: require('../assets/imges/sample.jpg'),
 
     },
     {
-        name: 'SHIN JUNGHWAN',
-        text: '투어스 | 신유',
-        position: '리더 | 메인래퍼',
+        name: 'TITLE02',
+        text: 'text1 | text2',
         value: '/링크1',
-        // img: require('../assets/imges/shinjunghwan.jpg')
+        img: require('../assets/imges/sample.jpg')
     },
     {
-        name: 'SHIN JUNGHWAN',
-        text: '투어스 | 신유',
-        position: '리더 | 메인래퍼',
+        name: 'TITLE02',
+        text: 'text1 | text2',
         value: '/링크1',
-        // img: require('../assets/imges/shinjunghwan.jpg')
+        img: require('../assets/imges/sample.jpg')
     },
 ];
 
